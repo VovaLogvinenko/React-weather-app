@@ -199,7 +199,11 @@
 }
 
 @media (max-width: 768px) {
-    .main {height: auto}
+    .main {
+        box-shadow: none;
+        height: auto;
+
+    }
     .main-degree {
         width: auto;
         padding: 30px 0;
