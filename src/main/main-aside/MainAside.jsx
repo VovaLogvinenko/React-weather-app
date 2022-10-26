@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux'
 
 function MainAside() {
   const currentWeather = useSelector(state => state.weather.currentWeather)
-  console.log(currentWeather)
   return (
     <aside className="right-side">
       <img
