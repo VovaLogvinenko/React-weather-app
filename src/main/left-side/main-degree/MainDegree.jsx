@@ -8,7 +8,7 @@ function MainDegree() {
       <h1 className="main-degree__temp">{Math.round(currentWeather.main.temp - 273)}</h1>
       <img
         src={`image/main/main-degrees/${currentWeather.weather[0].icon}.svg`}
-        alt="Sunny"
+        alt={currentWeather.weather[0].main}
         className="main-degree__img"
         width="120"
       />
