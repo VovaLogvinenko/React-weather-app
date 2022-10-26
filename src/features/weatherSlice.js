@@ -36,7 +36,7 @@ export const weatherSlice = createSlice({
     extraReducers: {
         [getWeather.fulfilled]: () => console.log('fulfilled'),
         [getWeather.pending]: () => console.log('pending'),
-        [getWeather.rejected]: () => alert('Не вірно введена пошта!')
+        [getWeather.rejected]: () => alert('Не вірно введено місто!')
     }
 })
 
