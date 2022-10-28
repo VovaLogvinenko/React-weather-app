@@ -48,7 +48,7 @@ export const weatherSlice = createSlice({
             })
             .addCase(getWeather.rejected, (state) => {
                 state.progress = 100
-                alert('Не вірно введено місто')
+                alert('Не вірно введено місто!')
             })
     }
 })
