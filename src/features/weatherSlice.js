@@ -5,6 +5,7 @@ const initialState = {
     weather: [],
     currentWeather: [],
     bool: false,
+    progress: 0
 }
 
 // process.env.REACT_APP_API_KEY
@@ -29,16 +30,28 @@ export const weatherSlice = createSlice({
         setCurrentWeather: (state, action) => {
             state.currentWeather = action.payload
         },
-        setBoolOff: (state, action) => {
+        setBoolOff: (state) => {
             state.bool = false
+            state.progress = 0
+        },
+        setProgress: (state, action) => {
+            state.progress = action.payload
         }
     },
-    extraReducers: {
-        [getWeather.fulfilled]: () => console.log('fulfilled'),
-        [getWeather.pending]: () => console.log('pending'),
-        [getWeather.rejected]: () => alert('Не вірно введено місто!')
+    extraReducers: (builder) => {
+        builder
+            .addCase(getWeather.pending, (state) => {
+                state.progress = 30
+            })
+            .addCase(getWeather.fulfilled, (state) => {
+                state.progress = 100
+            })
+            .addCase(getWeather.rejected, (state) => {
+                state.progress = 100
+                alert('Не вірно введено місто')
+            })
     }
 })
 
-export const { setWeather, setCurrentWeather, setBoolOff } = weatherSlice.actions
+export const { setWeather, setCurrentWeather, setBoolOff, setProgress } = weatherSlice.actions
 export default weatherSlice.reducer
