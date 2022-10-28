@@ -38,8 +38,8 @@ export const weatherSlice = createSlice({
             state.progress = action.payload
         }
     },
-    extraReducers: (builder) => {
-        builder
+    extraReducers: (weather) => {
+        weather
             .addCase(getWeather.pending, (state) => {
                 state.progress = 30
             })
