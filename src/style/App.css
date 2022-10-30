@@ -50,6 +50,8 @@
 .right-side {width: 35%}
 
 .right-side img {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     width: 100%;
     min-height: 673px;
     height: 100%;
@@ -194,6 +196,7 @@
         border-radius: 0;
     }
     .left-side {margin: 40px}
+    .right-side img {border-radius: 0;}
 }
 
 @media (max-width: 1200px) {
