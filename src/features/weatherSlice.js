@@ -47,8 +47,12 @@ export const weatherSlice = createSlice({
                 state.progress = 100
             })
             .addCase(getWeather.rejected, (state) => {
+                if (navigator.onLine){
+                    alert('Не вірно введено місто!')
+                } else {
+                    alert('Немає доступу до мережі!'); 
+                }
                 state.progress = 100
-                alert('Не вірно введено місто!')
             })
     }
 })

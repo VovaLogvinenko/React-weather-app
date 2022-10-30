@@ -1,3 +1,5 @@
+/* <---------------------------- Стилі ----------------------------------> */
+
 @font-face {
     font-family: "Roboto-Medium";
     font-weight: 500;
@@ -43,6 +45,8 @@
     -moz-box-shadow: 0px 0px 67px 0px rgba(0,0,0,0.54);
 }
 
+/* <---------------------- Right side image --------------------------> */
+
 .right-side {width: 35%}
 
 .right-side img {
@@ -51,6 +55,10 @@
     height: 100%;
     display: block;
 }
+
+/* <---------------------- Right side image -----------------------------> */
+
+/* <------------------------- left side header ---------------------------> */
 
 .left-side {
     display: flex;
@@ -102,6 +110,10 @@
 
 .main-header__input-img {cursor: pointer;}
 
+/* <------------------------- left side header ---------------------------> */
+
+/* <-------------------------- left side degree ---------------------------> */
+
 .main-degree {
     padding: 60px 0;
     width: 500px;
@@ -135,6 +147,10 @@
     fill: #bd7777;
 }
 
+/* <-------------------------- left side degree ---------------------------> */
+
+/* <-------------------------- left side footer ---------------------------> */
+
 .main-footer {
     display: flex;
     align-items: flex-start;
@@ -164,9 +180,9 @@
     font-size: 1.2em;
 }
 
+/* <-------------------------- left side footer ---------------------------> */
 
-
-
+/* <-------------------------- Media ---------------------------> */
 
 @media (max-width: 1366px) {
     .main {
